@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1918" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppIotHumidity" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIS-Mi-BAG">
+                                <rect key="frame" x="153" y="99" width="69" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROG-9F-pz7">
+                                <rect key="frame" x="141" y="165" width="100" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="ke0-59-gDE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exa-ns-RpQ">
+                                <rect key="frame" x="142" y="445" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Get Humidity"/>
+                                <connections>
+                                    <action selector="mainHumidityButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qJr-9p-EjH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIY-UD-jVX">
+                                <rect key="frame" x="249" y="185" width="27" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ROG-9F-pz7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="141" id="F5D-66-Cch"/>
+                            <constraint firstItem="rIS-Mi-BAG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="137" id="Fyi-zR-NcJ"/>
+                            <constraint firstItem="hIY-UD-jVX" firstAttribute="leading" secondItem="ROG-9F-pz7" secondAttribute="trailing" constant="8" id="Kgs-cZ-hFt"/>
+                            <constraint firstAttribute="trailing" secondItem="ROG-9F-pz7" secondAttribute="trailing" constant="134" id="Or4-GT-hef"/>
+                            <constraint firstItem="hIY-UD-jVX" firstAttribute="bottom" secondItem="ROG-9F-pz7" secondAttribute="bottom" constant="-20" id="PWE-UX-JeY"/>
+                            <constraint firstItem="ROG-9F-pz7" firstAttribute="top" secondItem="rIS-Mi-BAG" secondAttribute="bottom" constant="45" id="UgB-WI-Pwi"/>
+                            <constraint firstItem="rIS-Mi-BAG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="79" id="b4n-z8-SWo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rIS-Mi-BAG" secondAttribute="trailing" constant="137" id="yfZ-nC-WIf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="humidityValue" destination="ROG-9F-pz7" id="1nV-vb-ScC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="136.28185907046478"/>
+        </scene>
+    </scenes>
+</document>
